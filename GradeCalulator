@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class GradeCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        float socialScience, science, maths, english;
+
+        // Input marks for Social Science
+        System.out.print("Enter the marks of Social Science: ");
+        socialScience = scanner.nextFloat();
+
+        // Input marks for Science
+        System.out.print("Enter the marks of Science: ");
+        science = scanner.nextFloat();
+
+        // Input marks for Maths
+        System.out.print("Enter the marks of Maths: ");
+        maths = scanner.nextFloat();
+
+        // Input marks for English
+        System.out.print("Enter the marks of English: ");
+        english = scanner.nextFloat();
+
+        // Calculate the average percentage
+        float total = (socialScience + science + maths + english) / 4;
+
+        // Print the total percentage with limited decimal places
+        System.out.printf("The total percentage of 4 subjects is: %.2f%n", total);
+        
+        // Close the scanner to prevent resource leak
+        scanner.close();
+    }
+}
